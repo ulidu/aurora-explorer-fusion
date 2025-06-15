@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Copy, Cut, Trash2, Edit, Eye, Share, FolderPlus, FileText, Settings, Star, Tag } from 'lucide-react';
+import { Copy, Scissors, Trash2, Edit, Eye, Share, FolderPlus, FileText, Settings, Star, Tag } from 'lucide-react';
 
 interface ContextMenuProps {
   x: number;
@@ -16,7 +16,7 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ x, y, items, onAction,
     { icon: <Edit size={14} />, label: 'Rename', action: 'rename' as const },
     { type: 'separator' },
     { icon: <Copy size={14} />, label: 'Copy', action: 'copy' as const },
-    { icon: <Cut size={14} />, label: 'Cut', action: 'cut' as const },
+    { icon: <Scissors size={14} />, label: 'Cut', action: 'cut' as const },
     { type: 'separator' },
     { icon: <Star size={14} />, label: 'Add to Favorites', action: 'favorite' as const },
     { icon: <Tag size={14} />, label: 'Tag...', action: 'tag' as const },
