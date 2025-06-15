@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,7 +64,7 @@ export default {
 				}
 			},
 			gridTemplateColumns: {
-				'auto-fill': 'repeat(auto-fill, minmax(120px, 1fr))',
+				'auto-fill': 'repeat(auto-fill, minmax(140px, 1fr))',
 			},
 			backdropBlur: {
 				'xs': '2px',
