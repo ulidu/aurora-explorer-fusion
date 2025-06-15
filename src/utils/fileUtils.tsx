@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { File, Folder, Image, Video, Music, FileText, Archive } from 'lucide-react';
 import { FileItem } from '../components/FileManager';
 
