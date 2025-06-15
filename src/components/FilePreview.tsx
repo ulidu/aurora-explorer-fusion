@@ -12,31 +12,34 @@ export const FilePreview: React.FC<FilePreviewProps> = ({ file }) => {
   
   return (
     <div className="relative w-16 h-16 mx-auto mb-2">
-      {/* File background */}
-      <div className="absolute inset-0 bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-600 shadow-sm">
-        {/* File icon */}
+      {/* Modern file background with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+        {/* File icon with modern positioning */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {getFileIcon(file, 48)}
+          {getFileIcon(file, 32)}
         </div>
       </div>
       
-      {/* Extension label */}
+      {/* Modern extension label */}
       {ext && (
-        <div className="absolute -bottom-1 -right-1 bg-gray-700 dark:bg-gray-900 text-white text-xs rounded px-1 py-0.5 font-medium uppercase shadow-sm">
+        <div className="absolute -bottom-1 -right-1 bg-gradient-to-r from-gray-700 to-gray-800 dark:from-gray-900 dark:to-black text-white text-xs rounded-md px-1.5 py-0.5 font-medium uppercase shadow-md border border-white/10">
           {ext}
         </div>
       )}
       
-      {/* File type specific overlays */}
+      {/* File type specific modern overlays */}
       {ext && ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg'].includes(ext) && (
-        <div className="absolute inset-1 bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900/30 dark:to-green-800/20 rounded opacity-50" />
+        <div className="absolute inset-1 bg-gradient-to-br from-green-100/50 to-green-200/30 dark:from-green-900/20 dark:to-green-800/10 rounded-lg" />
       )}
       {ext && ['mp4', 'avi', 'mov', 'mkv'].includes(ext) && (
-        <div className="absolute inset-1 bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/20 rounded opacity-50" />
+        <div className="absolute inset-1 bg-gradient-to-br from-purple-100/50 to-purple-200/30 dark:from-purple-900/20 dark:to-purple-800/10 rounded-lg" />
       )}
       {ext && ['mp3', 'wav', 'flac', 'aac'].includes(ext) && (
-        <div className="absolute inset-1 bg-gradient-to-br from-orange-100 to-orange-50 dark:from-orange-900/30 dark:to-orange-800/20 rounded opacity-50" />
+        <div className="absolute inset-1 bg-gradient-to-br from-orange-100/50 to-orange-200/30 dark:from-orange-900/20 dark:to-orange-800/10 rounded-lg" />
       )}
+      
+      {/* Subtle glow effect on hover */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-400/0 to-gray-600/0 group-hover:from-gray-400/5 group-hover:to-gray-600/5 transition-all duration-300 pointer-events-none" />
     </div>
   );
 };
